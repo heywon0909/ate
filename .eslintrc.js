@@ -7,6 +7,8 @@ module.exports = {
     "plugin:eslint-plugin/recommended",
     "plugin:node/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
   ],
   parser: "@typescript-eslint/parser",
   env: {
@@ -16,6 +18,9 @@ module.exports = {
     project: "tsconfig.json",
     sourceType: "module",
     ecmaVersion: "es2019",
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   overrides: [
     {

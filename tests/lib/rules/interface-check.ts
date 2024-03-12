@@ -1,6 +1,6 @@
 import * as mocha from "mocha";
 import { RuleTester } from "@typescript-eslint/rule-tester";
-import rule from "../../../lib/rules/type-check.js";
+import rule from "../../../lib/rules/interface-check.js";
 
 // Set up cleanup after tests are done
 RuleTester.afterAll = mocha.after;
@@ -11,16 +11,20 @@ ruleTester.run("type-check option", rule, {
   // valid case has no errors
   valid: [
     {
-      code: `type TAnimal = 'cat' | 'dog';`,
+      code: `interface IProps{
+        name:string
+      }`,
     },
   ],
   invalid: [
     {
-      code: `type Animal = 'cat' | 'dog';`,
+      code: `interface Props{
+        name:string
+      }`,
       // for an invalid case we list which messageIds (or any other reported data) should be present
       errors: [
         {
-          messageId: "typecheck",
+          messageId: "interfacecheck",
         },
       ],
     },

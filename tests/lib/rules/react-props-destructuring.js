@@ -1,6 +1,6 @@
 import * as mocha from "mocha";
 import { RuleTester } from "@typescript-eslint/rule-tester";
-import rule from "../../../lib/rules/react-props-check.js";
+import rule from "../../../lib/rules/react-props-destructuring.js";
 // Set up cleanup after tests are done
 RuleTester.afterAll = mocha.after;
 const ruleTester = new RuleTester({
@@ -11,28 +11,26 @@ const ruleTester = new RuleTester({
         },
     },
 });
-ruleTester.run("react props check", rule, {
+ruleTester.run("react props destructuring", rule, {
     // valid case has no errors
     valid: [
         {
             code: `
-      const Components1 = (props : Props) => {
- 	const {title, color, size, colorType} = props   
- };
+      const Components1 = ({title, color, size} : Props) => {
+};
 `,
         },
     ],
     invalid: [
         {
             code: `
-       const Components1 = (props : Props) => {
- 	const {title, color} = props   
- };
+      const Components1 = ({title, color, size, colorType} : Props) => {
+    };
 `,
             // for an invalid case we list which messageIds (or any other reported data) should be present
             errors: [
                 {
-                    messageId: "reactpropscheck",
+                    messageId: "reactpropsdestructuring",
                 },
             ],
         },

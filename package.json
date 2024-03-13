@@ -17,6 +17,7 @@
     "lint:js": "eslint .",
     "test": "mocha tests --recursive",
     "test-ts": "npx tsc",
+    "build": "tsc -p tsconfig.json",
     "update:eslint-docs": "eslint-doc-generator"
   },
   "dependencies": {

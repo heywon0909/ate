@@ -12,7 +12,6 @@ const rule = createRule({
     return {
       ArrowFunctionExpression(node) {
         const param = node.params.filter((v: any) => v.name == "props");
-
         // ObjectPattern 함수 추가
         const node_val = (node.body as any).body.filter(
           (v: any) => v.type === "VariableDeclaration"
@@ -22,6 +21,7 @@ const rule = createRule({
         );
 
         if (
+          param &&
           object[0].id.properties &&
           object[0].id.properties.length < 4 &&
           object[0].init.name === "props"

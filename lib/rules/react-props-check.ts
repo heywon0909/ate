@@ -1,6 +1,5 @@
 import { ESLintUtils } from "@typescript-eslint/utils";
 import { RuleRecommendation } from "@typescript-eslint/utils/ts-eslint";
-import { Identifier } from "@typescript-eslint/types/dist/generated/ast-spec.js";
 
 const createRule = ESLintUtils.RuleCreator(
   (name) => `https://example.com/rule/${name}`

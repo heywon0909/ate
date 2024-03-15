@@ -29,6 +29,6 @@ module.exports = {
     },
   ],
   rules: {
-    "node/no-extraneous-import": "0",
+    "node/no-extraneous-import": 0,
   },
 };

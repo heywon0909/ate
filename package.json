@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-ate",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "This is eslint-plugin for ate-Eight",
   "keywords": [
     "eslint",
@@ -9,8 +9,8 @@
   ],
   "type": "commonjs",
   "author": "ate-Eight",
-  "main": "./lib/index.js",
-  "exports": "./lib/index.js",
+  "main": "./dist/lib/index.js",
+  "exports": "./dist/lib/index.js",
   "scripts": {
     "lint": "npm-run-all \"lint:*\"",
     "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",

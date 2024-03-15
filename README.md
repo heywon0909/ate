@@ -52,7 +52,10 @@ TODO: Run eslint-doc-generator to generate the configs list (or delete this sect
 ## Rules
 
 <!-- begin auto-generated rules list -->
-TODO: Run eslint-doc-generator to generate the rules list.
+
+| Name |
+| :--- |
+
 <!-- end auto-generated rules list -->
 
 

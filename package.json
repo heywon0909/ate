@@ -1,13 +1,13 @@
 {
   "name": "eslint-plugin-ate",
-  "version": "0.0.0",
+  "version": "0.0.3",
   "description": "This is eslint-plugin for ate-Eight",
   "keywords": [
     "eslint",
     "eslintplugin",
     "eslint-plugin"
   ],
-  "type": "module",
+  "type": "commonjs",
   "author": "ate-Eight",
   "main": "./lib/index.js",
   "exports": "./lib/index.js",

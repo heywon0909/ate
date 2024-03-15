@@ -14,7 +14,7 @@ const ruleTester = new RuleTester({
   },
 });
 
-ruleTester.run("react props destructuring", rule, {
+ruleTester.run("함수형 컴포넌트의 props parameter 구조분해 할당", rule, {
   // valid case has no errors
   valid: [
     {
@@ -33,7 +33,7 @@ ruleTester.run("react props destructuring", rule, {
       // for an invalid case we list which messageIds (or any other reported data) should be present
       errors: [
         {
-          messageId: "reactpropsdestructuring",
+          messageId: "reactPropsDestructuring",
         },
       ],
     },

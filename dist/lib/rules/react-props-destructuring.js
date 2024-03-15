@@ -1,5 +1,5 @@
 import { ESLintUtils } from "@typescript-eslint/utils";
-const createRule = ESLintUtils.RuleCreator((name) => `https://example.com/rule/${name}`);
+const createRule = ESLintUtils.RuleCreator((name) => `https://www.npmjs.com/package/eslint-plugin-ate/${name}`);
 // Type: RuleModule<"uppercase", ...>
 const rule = createRule({
     create(context) {
@@ -10,20 +10,20 @@ const rule = createRule({
                 if (node.properties.length > 3 && name === "Props") {
                     context.report({
                         node,
-                        messageId: "reactpropsdestructuring",
+                        messageId: "reactPropsDestructuring",
                     });
                 }
             },
         };
     },
-    name: "react-props-check",
+    name: "react-props-desctructuring",
     meta: {
         docs: {
-            description: "react-function should be inline function which start with `handle`.",
+            description: "함수형 컴포넌트의 props의 property갯수가 3개 이하인 경우 함수형 컴포넌트 parameter에서 구조분해 할당해야 합니다.",
             recommended: false,
         },
         messages: {
-            reactpropsdestructuring: "react-function should be inline function which start with `handle`.",
+            reactPropsDestructuring: "함수형 컴포넌트의 props의 property갯수가 3개 이하인 경우 함수형 컴포넌트 parameter에서 구조분해 할당해야 합니다.",
         },
         type: "suggestion",
         schema: [],

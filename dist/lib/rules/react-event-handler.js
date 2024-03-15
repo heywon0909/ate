@@ -1,5 +1,5 @@
 import { ESLintUtils } from "@typescript-eslint/utils";
-const createRule = ESLintUtils.RuleCreator((name) => `https://example.com/rule/${name}`);
+const createRule = ESLintUtils.RuleCreator((name) => `https://www.npmjs.com/package/eslint-plugin-ate/${name}`);
 // Type: RuleModule<"uppercase", ...>
 const rule = createRule({
     create(context) {
@@ -14,39 +14,37 @@ const rule = createRule({
                 if (invalidExp.includes(expression.type)) {
                     const ex_i = expression;
                     const ex_call = expression;
-                    console.log("ex_I", ex_i.name);
-                    console.log("ex_call", ex_call.callee);
                     if (!ex_i.name || !ex_call.callee) {
                         context.report({
                             node: expression,
-                            messageId: "reactfunctioncheck",
+                            messageId: "reactEventHandler",
                         });
                     }
                     if (ex_i.name && !((_a = ex_i.name) === null || _a === void 0 ? void 0 : _a.startsWith("handle"))) {
                         context.report({
                             node: expression,
-                            messageId: "reactfunctioncheck",
+                            messageId: "reactEventHandler",
                         });
                     }
                     if (ex_call.callee &&
                         !ex_call.callee.name.startsWith("handle")) {
                         context.report({
                             node: expression,
-                            messageId: "reactfunctioncheck",
+                            messageId: "reactEventHandler",
                         });
                     }
                 }
             },
         };
     },
-    name: "react-function-check",
+    name: "react-event-handler",
     meta: {
         docs: {
-            description: "react-function should be inline function which start with `handle`.",
+            description: "리액트 이벤트 함수는 handle로 시작해야하며, 약자 사용은 불가합니다.",
             recommended: false,
         },
         messages: {
-            reactfunctioncheck: "react-function should be inline function which start with `handle`.",
+            reactEventHandler: "리액트 이벤트 함수는 handle로 시작해야하며, 약자 사용은 불가합니다.",
         },
         type: "suggestion",
         schema: [],

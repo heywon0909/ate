@@ -1,13 +1,13 @@
 import * as mocha from "mocha";
 import { RuleTester } from "@typescript-eslint/rule-tester";
-import rule from "../../../lib/rules/type-check.js";
+import rule from "../../../lib/rules/ts-naming-type.js";
 
 // Set up cleanup after tests are done
 RuleTester.afterAll = mocha.after;
 
 const ruleTester = new RuleTester();
 
-ruleTester.run("type-check option", rule, {
+ruleTester.run("타입스크립트 네이밍:타입 정의", rule, {
   // valid case has no errors
   valid: [
     {
@@ -20,7 +20,7 @@ ruleTester.run("type-check option", rule, {
       // for an invalid case we list which messageIds (or any other reported data) should be present
       errors: [
         {
-          messageId: "typecheck",
+          messageId: "tsNamingType",
         },
       ],
     },

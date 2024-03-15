@@ -6,7 +6,7 @@ import {
 } from "@typescript-eslint/types/dist/generated/ast-spec.js";
 
 const createRule = ESLintUtils.RuleCreator(
-  (name) => `https://example.com/rule/${name}`
+  (name) => `https://www.npmjs.com/package/eslint-plugin-ate/${name}`
 );
 
 // Type: RuleModule<"uppercase", ...>
@@ -22,18 +22,17 @@ const rule = createRule({
         if (invalidExp.includes(expression.type)) {
           const ex_i = expression as unknown as Identifier;
           const ex_call = expression as unknown as CallExpression;
-          console.log("ex_I", ex_i.name);
-          console.log("ex_call", ex_call.callee);
+
           if (!ex_i.name || !ex_call.callee) {
             context.report({
               node: expression,
-              messageId: "reactfunctioncheck",
+              messageId: "reactEventHandler",
             });
           }
           if (ex_i.name && !ex_i.name?.startsWith("handle")) {
             context.report({
               node: expression,
-              messageId: "reactfunctioncheck",
+              messageId: "reactEventHandler",
             });
           }
 
@@ -43,23 +42,23 @@ const rule = createRule({
           ) {
             context.report({
               node: expression,
-              messageId: "reactfunctioncheck",
+              messageId: "reactEventHandler",
             });
           }
         }
       },
     };
   },
-  name: "react-function-check",
+  name: "react-event-handler",
   meta: {
     docs: {
       description:
-        "react-function should be inline function which start with `handle`.",
+        "리액트 이벤트 함수는 handle로 시작해야하며, 약자 사용은 불가합니다.",
       recommended: false as unknown as RuleRecommendation,
     },
     messages: {
-      reactfunctioncheck:
-        "react-function should be inline function which start with `handle`.",
+      reactEventHandler:
+        "리액트 이벤트 함수는 handle로 시작해야하며, 약자 사용은 불가합니다.",
     },
     type: "suggestion",
     schema: [],

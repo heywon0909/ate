@@ -2,34 +2,35 @@ import { ESLintUtils } from "@typescript-eslint/utils";
 import { RuleRecommendation } from "@typescript-eslint/utils/ts-eslint";
 
 const createRule = ESLintUtils.RuleCreator(
-  (name) => `https://example.com/rule/${name}`
+  (name) => `https://www.npmjs.com/package/eslint-plugin-ate/rule/${name}`
 );
 
 // Type: RuleModule<"uppercase", ...>
 const rule = createRule({
   create(context) {
     const startWithTname = (node: any) => {
-      return node.id.name.startsWith("I");
+      console.log("node", node.id.name);
+      return node.id.name.startsWith("T");
     };
     return {
-      TSInterfaceDeclaration(node) {
+      TSTypeAliasDeclaration(node) {
         if (!startWithTname(node)) {
           context.report({
             node,
-            messageId: "interfacecheck",
+            messageId: "tsNamingType",
           });
         }
       },
     };
   },
-  name: "interface-check option",
+  name: "ts-naming-type",
   meta: {
     docs: {
-      description: "Interface name should start with `I`",
+      description: "타입스크립트 네이밍: 타입은 T로 작성해야한다.",
       recommended: false as unknown as RuleRecommendation,
     },
     messages: {
-      interfacecheck: "Interface name should start with `I`",
+      tsNamingType: "타입스크립트 네이밍: 타입은 T로 작성해야한다.",
     },
     type: "suggestion",
     schema: [],

@@ -1,5 +1,5 @@
 import { ESLintUtils } from "@typescript-eslint/utils";
-const createRule = ESLintUtils.RuleCreator((name) => `https://example.com/rule/${name}`);
+const createRule = ESLintUtils.RuleCreator((name) => `https://www.npmjs.com/package/eslint-plugin-ate/${name}`);
 // Type: RuleModule<"uppercase", ...>
 const rule = createRule({
     create(context) {
@@ -15,7 +15,7 @@ const rule = createRule({
                     object[0].init.name === "props") {
                     context.report({
                         node,
-                        messageId: "reactpropscheck",
+                        messageId: "reactPropsCheck",
                     });
                 }
             },
@@ -24,11 +24,11 @@ const rule = createRule({
     name: "react-props-check",
     meta: {
         docs: {
-            description: "react-function should be inline function which start with `handle`.",
+            description: "함수형 컴포넌트의 props의 property갯수가 4개 이상인 경우 props 변수로 받아 구조분해 할당해야합니다.",
             recommended: false,
         },
         messages: {
-            reactpropscheck: "react-function should be inline function which start with `handle`.",
+            reactPropsCheck: "함수형 컴포넌트의 props의 property갯수가 4개 이상인 경우 props 변수로 받아 구조분해 할당해야합니다.",
         },
         type: "suggestion",
         schema: [],

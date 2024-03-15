@@ -2,7 +2,7 @@ import { ESLintUtils } from "@typescript-eslint/utils";
 import { RuleRecommendation } from "@typescript-eslint/utils/ts-eslint";
 
 const createRule = ESLintUtils.RuleCreator(
-  (name) => `https://example.com/rule/${name}`
+  (name) => `https://www.npmjs.com/package/eslint-plugin-ate/${name}`
 );
 
 // Type: RuleModule<"uppercase", ...>
@@ -27,7 +27,7 @@ const rule = createRule({
         ) {
           context.report({
             node,
-            messageId: "reactpropscheck",
+            messageId: "reactPropsCheck",
           });
         }
       },
@@ -37,12 +37,12 @@ const rule = createRule({
   meta: {
     docs: {
       description:
-        "react-function should be inline function which start with `handle`.",
+        "함수형 컴포넌트의 props의 property갯수가 4개 이상인 경우 props 변수로 받아 구조분해 할당해야합니다.",
       recommended: false as unknown as RuleRecommendation,
     },
     messages: {
-      reactpropscheck:
-        "react-function should be inline function which start with `handle`.",
+      reactPropsCheck:
+        "함수형 컴포넌트의 props의 property갯수가 4개 이상인 경우 props 변수로 받아 구조분해 할당해야합니다.",
     },
     type: "suggestion",
     schema: [],

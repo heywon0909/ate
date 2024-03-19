@@ -6,7 +6,7 @@ const createRule = ESLintUtils.RuleCreator(
 );
 
 // Type: RuleModule<"uppercase", ...>
-const rule = createRule({
+export default createRule({
   create(context) {
     return {
       ArrowFunctionExpression(node) {
@@ -49,7 +49,3 @@ const rule = createRule({
   },
   defaultOptions: [],
 });
-export default rule;
-function ObjectPattern(node: unknown) {
-  throw new Error("Function not implemented.");
-}

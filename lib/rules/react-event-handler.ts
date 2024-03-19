@@ -10,7 +10,7 @@ const createRule = ESLintUtils.RuleCreator(
 );
 
 // Type: RuleModule<"uppercase", ...>
-const rule = createRule({
+export default createRule({
   create(context) {
     const invalidExp = [
       "ArrowFunctionExpression",
@@ -65,4 +65,3 @@ const rule = createRule({
   },
   defaultOptions: [],
 });
-export default rule;

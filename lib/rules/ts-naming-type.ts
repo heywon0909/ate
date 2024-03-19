@@ -6,7 +6,7 @@ const createRule = ESLintUtils.RuleCreator(
 );
 
 // Type: RuleModule<"uppercase", ...>
-const rule = createRule({
+export default createRule({
   create(context) {
     const startWithTname = (node: any) => {
       console.log("node", node.id.name);
@@ -37,4 +37,3 @@ const rule = createRule({
   },
   defaultOptions: [],
 });
-export default rule;

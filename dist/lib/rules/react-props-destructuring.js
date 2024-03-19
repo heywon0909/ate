@@ -1,5 +1,7 @@
-import { ESLintUtils } from "@typescript-eslint/utils";
-const createRule = ESLintUtils.RuleCreator((name) => `https://www.npmjs.com/package/eslint-plugin-ate/${name}`);
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const utils_1 = require("@typescript-eslint/utils");
+const createRule = utils_1.ESLintUtils.RuleCreator((name) => `https://www.npmjs.com/package/eslint-plugin-ate/${name}`);
 // Type: RuleModule<"uppercase", ...>
 const rule = createRule({
     create(context) {
@@ -29,4 +31,4 @@ const rule = createRule({
     },
     defaultOptions: [],
 });
-export default rule;
+exports.default = rule;

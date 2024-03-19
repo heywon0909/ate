@@ -7,7 +7,6 @@
     "eslintplugin",
     "eslint-plugin"
   ],
-  "type": "module",
   "author": "ate-Eight",
   "main": "./dist/lib/index.js",
   "exports": "./dist/lib/index.js",
@@ -27,6 +26,7 @@
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.29",
     "@typescript-eslint/rule-tester": "^7.1.1",
     "eslint": "^8.57.0",
     "eslint-doc-generator": "^1.0.0",

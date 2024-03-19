@@ -53,8 +53,13 @@ TODO: Run eslint-doc-generator to generate the configs list (or delete this sect
 
 <!-- begin auto-generated rules list -->
 
-| Name |
-| :--- |
+| Name                                                                 |
+| :------------------------------------------------------------------- |
+| [react-event-handler](docs/rules/react-event-handler.md)             |
+| [react-props-check](docs/rules/react-props-check.md)                 |
+| [react-props-destructuring](docs/rules/react-props-destructuring.md) |
+| [ts-naming-interface](docs/rules/ts-naming-interface.md)             |
+| [ts-naming-type](docs/rules/ts-naming-type.md)                       |
 
 <!-- end auto-generated rules list -->
 

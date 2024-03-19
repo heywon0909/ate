@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@typescript-eslint/utils": "^7.1.1",
+    "eslint-plugin-import": "^2.29.1",
     "requireindex": "^1.2.0"
   },
   "devDependencies": {

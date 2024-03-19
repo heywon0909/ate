@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = {
+export default {
   root: true,
   extends: [
     "eslint:recommended",
@@ -9,6 +9,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:import/recommended",
   ],
   parser: "@typescript-eslint/parser",
   env: {
@@ -29,6 +30,7 @@ module.exports = {
     },
   ],
   rules: {
-    "node/no-extraneous-import": 0,
+    "node/no-extraneous-import": "1",
+    "import/no-unused-modules": "1",
   },
 };

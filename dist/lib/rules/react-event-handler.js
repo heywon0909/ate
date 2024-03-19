@@ -10,7 +10,6 @@ const rule = createRule({
         ];
         return {
             JSXExpressionContainer({ expression }) {
-                var _a;
                 if (invalidExp.includes(expression.type)) {
                     const ex_i = expression;
                     const ex_call = expression;
@@ -20,7 +19,7 @@ const rule = createRule({
                             messageId: "reactEventHandler",
                         });
                     }
-                    if (ex_i.name && !((_a = ex_i.name) === null || _a === void 0 ? void 0 : _a.startsWith("handle"))) {
+                    if (ex_i.name && !ex_i.name?.startsWith("handle")) {
                         context.report({
                             node: expression,
                             messageId: "reactEventHandler",

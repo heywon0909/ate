@@ -8,11 +8,13 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const requireIndex = require("requireindex");
+import requireIndex from "requireindex";
 
-//------------------------------------------------------------------------------
-// Plugin Definition
-//------------------------------------------------------------------------------
+// 동적 import()를 사용하여 모듈 가져오기
+// 동적 import()를 사용하여 모듈 가져오기
 
-// import all rules in lib/rules
-module.exports.rules = requireIndex(__dirname + "/rules");
+const dirUrl = new URL(".", import.meta.url);
+
+const script = new URL("rules/index.js", dirUrl);
+
+export const rules = await import(script).then(requireIndex);

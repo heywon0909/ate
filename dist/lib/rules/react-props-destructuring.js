@@ -5,8 +5,7 @@ const rule = createRule({
     create(context) {
         return {
             ObjectPattern(node) {
-                var _a;
-                const name = ((_a = node.typeAnnotation) === null || _a === void 0 ? void 0 : _a.typeAnnotation).typeName.name;
+                const name = node.typeAnnotation?.typeAnnotation.typeName.name;
                 if (node.properties.length > 3 && name === "Props") {
                     context.report({
                         node,

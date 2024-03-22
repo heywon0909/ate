@@ -34,13 +34,13 @@ ruleTester.run("react-event-handler", rule, {
     {
       code: `const MyComponent=()=>{
         const myFunc = () => {}
-        const myCurry = () => () => {}
+        const onHandle = () => () => {}
 
         return (
                 <div>
                     <div onClick={() => {}}></div>
                     <div onClick={myFunc}></div>
-                    <div onClick={myCurry}></div>
+                    <div onClick={onHandle}></div>
                 </div>
                 )
 }`,

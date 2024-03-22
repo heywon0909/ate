@@ -5,7 +5,15 @@ const rule = require("../../../lib/rules/react-props-check.js");
 // Set up cleanup after tests are done
 RuleTester.afterAll = mocha.after;
 
-const ruleTester = new RuleTester();
+const ruleTester = new RuleTester({
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: "module",
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+});
 
 ruleTester.run("react-props-check", rule, {
   // valid case has no errors
@@ -22,7 +30,12 @@ ruleTester.run("react-props-check", rule, {
         }
         const Components1:React.FC<Props>=(props:Props)=>{
           const {title, color, size, colorType} = props;
-          return (<div></div>)
+          return (<div>
+          <div>{title}</div>
+          <div>{color}</div>
+          <div>{size}</div>
+          <div>{colorType}</div>
+          </div>)
         }`,
     },
   ],
@@ -36,7 +49,10 @@ ruleTester.run("react-props-check", rule, {
        }
        const Components1:React.FC<Props>=(props:Props) =>{
         const {title, color} = props;
-     return (<div></div>)   
+     return (<div>
+        <div>{title}</div>
+        <div>{color}</div>
+        </div>)
  }
 `,
 

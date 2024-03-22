@@ -1,9 +1,14 @@
+const mocha = require("mocha");
 const rule = require("../../../lib/rules/react-event-handler.js");
-const { RuleTester } = require("eslint");
+const { RuleTester } = require("@typescript-eslint/rule-tester");
+
+// Set up cleanup after tests are done
+RuleTester.afterAll = mocha.after;
 
 const ruleTester = new RuleTester({
   parserOptions: {
     ecmaVersion: 2018,
+    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
@@ -15,14 +20,12 @@ ruleTester.run("react-event-handler", rule, {
   valid: [
     {
       code: `const MyComponent=()=>{
-            
+
             const handleMove= ()=>{}
 
-                return (
-                <div>
+                return (<div>
                     <div onClick={handleMove}></div>
-                </div> 
-                ) 
+                    </div>)
 }
 `,
     },
@@ -32,14 +35,14 @@ ruleTester.run("react-event-handler", rule, {
       code: `const MyComponent=()=>{
         const myFunc = () => {}
         const myCurry = () => () => {}
-                
+
         return (
                 <div>
                     <div onClick={() => {}}></div>
                     <div onClick={myFunc}></div>
                     <div onClick={myCurry}></div>
-                </div> 
-                ) 
+                </div>
+                )
 }`,
       // for an invalid case we list which messageIds (or any other reported data) should be present
       errors: [

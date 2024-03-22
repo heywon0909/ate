@@ -4,32 +4,39 @@ export default {
   root: true,
   extends: [
     "eslint:recommended",
-    "plugin:eslint-plugin/recommended",
     "plugin:node/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:react/jsx-runtime",
     "plugin:import/recommended",
     "plugin:airbnb-base/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
   ],
   parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-esliint", "babel-eslint"],
   env: {
     node: true,
+    es2020: true,
+    broswer: true,
   },
   parserOptions: {
-    project: "tsconfig.json",
     sourceType: "module",
-    ecmaVersion: "es2019",
+    ecmaVersion: 2018,
     ecmaFeatures: {
       jsx: true,
     },
   },
   overrides: [
     {
-      files: ["tests/**/*.js"],
+      files: ["tests/**/*.js", "tests/**/*.ts"],
       env: { mocha: true },
-      parser: "babel-eslint",
-      parserOptions: {},
+      // parser: "babel-eslint",
+      // parserOptions: {
+      //   ecmaVersion: 2020,
+      //   ecmaFeatures: {
+      //     jsx: true,
+      //   },
+      //   jsxPragma: null,
+      //   presets: ["@babel/preset-react", "@babel/preset-typescript"],
+      // },
     },
   ],
   rules: {

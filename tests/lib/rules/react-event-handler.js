@@ -1,24 +1,20 @@
-import * as mocha from "mocha";
-import { RuleTester } from "@typescript-eslint/rule-tester";
-import rule from "../../../lib/rules/react-event-handler.js";
-
-// Set up cleanup after tests are done
-RuleTester.afterAll = mocha.after;
+const rule = require("../../../lib/rules/react-event-handler.js");
+const { RuleTester } = require("eslint");
 
 const ruleTester = new RuleTester({
-  parser: "@typescript-eslint/parser",
   parserOptions: {
+    ecmaVersion: 2018,
     ecmaFeatures: {
       jsx: true,
     },
   },
 });
 
-ruleTester.run("리액트 이벤트 함수", rule, {
+ruleTester.run("react-event-handler", rule, {
   // valid case has no errors
   valid: [
     {
-      code: `export default function MyComponent(){
+      code: `const MyComponent=()=>{
             
             const handleMove= ()=>{}
 
@@ -27,12 +23,13 @@ ruleTester.run("리액트 이벤트 함수", rule, {
                     <div onClick={handleMove}></div>
                 </div> 
                 ) 
-}`,
+}
+`,
     },
   ],
   invalid: [
     {
-      code: `export default function MyComponent(){
+      code: `const MyComponent=()=>{
         const myFunc = () => {}
         const myCurry = () => () => {}
                 

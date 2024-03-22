@@ -10,6 +10,7 @@ export default {
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:import/recommended",
+    "plugin:airbnb-base/recommended",
   ],
   parser: "@typescript-eslint/parser",
   env: {
@@ -27,6 +28,8 @@ export default {
     {
       files: ["tests/**/*.js"],
       env: { mocha: true },
+      parser: "babel-eslint",
+      parserOptions: {},
     },
   ],
   rules: {

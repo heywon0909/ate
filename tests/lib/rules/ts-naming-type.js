@@ -1,6 +1,6 @@
-import * as mocha from "mocha";
-import { RuleTester } from "@typescript-eslint/rule-tester";
-import rule from "../../../lib/rules/ts-naming-type.js";
+const mocha = require("mocha");
+const { RuleTester } = require("@typescript-eslint/rule-tester");
+const rule = require("../../../lib/rules/ts-naming-type.js");
 
 // Set up cleanup after tests are done
 RuleTester.afterAll = mocha.after;

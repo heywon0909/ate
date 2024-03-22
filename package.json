@@ -8,8 +8,8 @@
     "eslint-plugin"
   ],
   "author": "heywon0909 <hw731911@gmail.com>",
-  "main": "./dist/lib/index.js",
-  "exports": "./dist/lib/index.js",
+  "main": "./lib/index.js",
+  "exports": "./lib/index.js",
   "scripts": {
     "lint": "npm-run-all \"lint:*\"",
     "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",

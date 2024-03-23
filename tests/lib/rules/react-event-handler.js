@@ -29,6 +29,19 @@ ruleTester.run("react-event-handler", rule, {
 }
 `,
     },
+    {
+      code: `
+export interface Props {
+    isFeedUi: boolean;
+}
+const FeedContainer = memo(({ isFeedUi }: Props) => {
+  return (<div>{isFeedUi}</div>)
+})
+FeedContainer.displayName = 'FeedContainer';
+export default FeedContainer;
+
+      `,
+    },
   ],
   invalid: [
     {

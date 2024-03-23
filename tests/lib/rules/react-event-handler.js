@@ -39,8 +39,42 @@ ruleTester.run("react-event-handler", rule, {
         return (
                 <div>
                     <div onClick={() => {}}></div>
-                    <div onClick={myFunc}></div>
-                    <div onClick={onHandle}></div>
+                </div>
+                )
+}`,
+      // for an invalid case we list which messageIds (or any other reported data) should be present
+      errors: [
+        {
+          messageId: "reactEventHandler",
+        },
+      ],
+    },
+    {
+      code: `const MyComponent=()=>{
+        const myFunc = () => {}
+        const onHandle = () => () => {}
+
+        return (
+                <div>
+                   <div onClick={myFunc}></div>
+                </div>
+                )
+}`,
+      // for an invalid case we list which messageIds (or any other reported data) should be present
+      errors: [
+        {
+          messageId: "reactEventHandler",
+        },
+      ],
+    },
+    {
+      code: `const MyComponent=()=>{
+        const myFunc = () => {}
+        const onHandle = () => () => {}
+
+        return (
+                <div>
+                 <div onClick={onHandle}></div>;
                 </div>
                 )
 }`,

@@ -7,7 +7,7 @@ RuleTester.afterAll = mocha.after;
 
 const ruleTester = new RuleTester({
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
     sourceType: "module",
     ecmaFeatures: {
       jsx: true,

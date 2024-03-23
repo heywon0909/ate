@@ -6,8 +6,9 @@ const rule = require("../../../lib/rules/react-props-destructuring.js");
 RuleTester.afterAll = mocha.after;
 
 const ruleTester = new RuleTester({
-  parser: "@typescript-eslint/parser",
   parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },

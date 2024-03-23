@@ -11,7 +11,7 @@ export default {
     "plugin:@typescript-eslint/recommended",
   ],
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-esliint", "babel-eslint"],
+  plugins: ["@typescript-eslint", "babel-eslint"],
   env: {
     node: true,
     es2020: true,
@@ -42,5 +42,7 @@ export default {
   rules: {
     "node/no-extraneous-import": "1",
     "import/no-unused-modules": "1",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
   },
 };

@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-ate",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "This is eslint-plugin for ate-Eight",
   "keywords": [
     "eslint",
@@ -29,6 +29,7 @@
     "@babel/preset-typescript": "^7.24.1",
     "@types/mocha": "^10.0.6",
     "@types/node": "^20.11.29",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
     "@typescript-eslint/rule-tester": "^7.3.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^8.57.0",

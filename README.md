@@ -22,32 +22,27 @@ Add `ate` to the plugins section of your `.eslintrc` configuration file. You can
 
 ```json
 {
-    "plugins": [
-        "ate"
-    ]
+  "plugins": ["ate"]
 }
 ```
-
 
 Then configure the rules you want to use under the rules section.
 
 ```json
 {
-    "rules": {
-        "ate/rule-name": 2
-    }
+  "rules": {
+    "ate/rule-name": 2
+  }
 }
 ```
-
-
 
 ## Configurations
 
 <!-- begin auto-generated configs list -->
+
 TODO: Run eslint-doc-generator to generate the configs list (or delete this section if no configs are offered).
+
 <!-- end auto-generated configs list -->
-
-
 
 ## Rules
 
@@ -61,6 +56,21 @@ TODO: Run eslint-doc-generator to generate the configs list (or delete this sect
 | [ts-naming-interface](docs/rules/ts-naming-interface.md)             |
 | [ts-naming-type](docs/rules/ts-naming-type.md)                       |
 
+💼 TBD
+🚫 TBD
+🏃 TBD
+☑️ Set in the `recommended`
+💡 Manually fixable by [editor suggestions]
+❌ Deprecated.
+
+| Name                                                                 | Description                                            | 💼  | 🚫  | 🔧  | 💡  | ❌  |
+| :------------------------------------------------------------------- | :----------------------------------------------------- | :-- | :-- | :-- | :-- | :-- |
+| [react-event-handler](docs/rules/react-event-handler.md)             | Definition for react event handler function naming     |     |     |     |     |     |
+| [react-props-check](docs/rules/react-props-check.md)                 | Definition for React functional Components Props Part1 |     |     |     |     | ❌  |
+| [react-props-destructuring](docs/rules/react-props-destructuring.md) | Definition for React function Component Part 2         |     |     |     |     |     |
+| [ts-naming-interface](docs/rules/ts-naming-interface.md)             | Definition for typescript Interface naming             |     |     |     |     |     |
+| [ts-naming-type](docs/rules/ts-naming-type.md)                       | Definition for typescript Type naming                  |     |     |     |     |     |
+
 <!-- end auto-generated rules list -->
 
-
+<!-- end auto-generated rules list -->

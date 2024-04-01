@@ -13,6 +13,17 @@ ruleTester.run("타입스크립트 네이밍:타입 정의", rule, {
     {
       code: `type TAnimal = 'cat' | 'dog';`,
     },
+    {
+      code: `import '@emotion/react';
+
+import theme from '../styles/theme';
+
+type ExtendedTheme = typeof theme;
+
+declare module '@emotion/react' {
+    export interface Theme extends ExtendedTheme {}
+}`,
+    },
   ],
   invalid: [
     {

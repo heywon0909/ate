@@ -140,6 +140,10 @@ FeedContainer.displayName = 'FeedContainer';
 export default FeedContainer;
 `,
     },
+    {
+      code: `const renderWithCustomStyled = async (ui: React.ReactElement, options?: RenderOptions) =>
+    await act(() => render(ui, { wrapper: Wrapper, ...options }));`,
+    },
   ],
   invalid: [
     {

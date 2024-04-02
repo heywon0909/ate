@@ -24,6 +24,12 @@ declare module '@emotion/react' {
     export interface Theme extends ExtendedTheme {}
 }`,
     },
+    {
+      code: `declare module '@emotion/react' {
+    export interface Theme extends ExtendedTheme {}
+}
+`,
+    },
   ],
   invalid: [
     {

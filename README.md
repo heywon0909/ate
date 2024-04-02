@@ -63,13 +63,14 @@ TODO: Run eslint-doc-generator to generate the configs list (or delete this sect
 💡 Manually fixable by [editor suggestions]
 ❌ Deprecated.
 
-| Name                                                                 | Description                                            | 💼  | 🚫  | 🔧  | 💡  | ❌  |
-| :------------------------------------------------------------------- | :----------------------------------------------------- | :-- | :-- | :-- | :-- | :-- |
-| [react-event-handler](docs/rules/react-event-handler.md)             | Definition for react event handler function naming     |     |     |     |     |     |
-| [react-props-check](docs/rules/react-props-check.md)                 | Definition for React functional Components Props Part1 |     |     |     |     | ❌  |
-| [react-props-destructuring](docs/rules/react-props-destructuring.md) | Definition for React function Component Part 2         |     |     |     |     |     |
-| [ts-naming-interface](docs/rules/ts-naming-interface.md)             | Definition for typescript Interface naming             |     |     |     |     |     |
-| [ts-naming-type](docs/rules/ts-naming-type.md)                       | Definition for typescript Type naming                  |     |     |     |     |     |
+| Name                                                                                                             | Description                                            | 💼  | 🚫  | 🔧  | 💡  | ❌  |
+| :--------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------- | :-- | :-- | :-- | :-- | :-- |
+| [react-event-handler](https://github.com/heywon0909/ate/blob/main/docs/rules/react-event-handler.md)             | Definition for react event handler function naming     |     |     |     |     |     |
+| [react-props-check](https://github.com/heywon0909/ate/blob/main/docs/rules/react-props-check.md)                 | Definition for React functional Components Props Part1 |     |     |     |     | ❌  |
+| [react-props-destructuring](https://github.com/heywon0909/ate/blob/main/docs/rules/react-props-destructuring.md) | Definition for React function Component Part 2         |     |     |     |     |     |
+| [ts-naming-interface](https://github.com/heywon0909/ate/blob/main/docs/rules/ts-naming-interface.md)             | Definition for typescript Interface naming             |     |     |     |     |     |
+| [ts-naming-type](https://github.com/heywon0909/ate/blob/main/docs/rules/ts-naming-type.md)                       | Definition for typescript Type naming                  |     |     |     |     |     |
+| [react-props-name](https://github.com/heywon0909/ate/blob/main/docs/rules/react-props-name.md)                   | Definition for React Functional Component Props name   |     |     |     |     |     |
 
 <!-- end auto-generated rules list -->
 

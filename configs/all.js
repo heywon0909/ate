@@ -1,6 +1,6 @@
 const allRules = require("../lib/index");
 module.exports = {
-  plugin: {
+  plugins: {
     ate: {
       rules: allRules,
     },

@@ -1,4 +1,4 @@
-const allRules = require("./lib/index");
+const allRules = require("./lib/rules");
 const configAll = require("./configs/all");
 
 // for legacy config system

@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-ate",
-  "version": "0.0.29",
+  "version": "0.0.33",
   "description": "This is eslint-plugin for ate-Eight",
   "keywords": [
     "eslint",
@@ -38,6 +38,7 @@
     "eslint-plugin-node": "^11.1.0",
     "mocha": "^10.0.0",
     "npm-run-all": "^4.1.5",
+    "object.fromentries": "^2.0.8",
     "typescript": "^5.0.2",
     "typescript-eslint": "^7.3.1"
   },
